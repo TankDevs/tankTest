@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="299.0" prefWidth="382.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <Button fx:id="btn_Login" layoutX="71.0" layoutY="159.0" mnemonicParsing="false" onMousePressed="#showDateTime" text="登录">
+         <font>
+            <Font name="Microsoft Himalaya" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="53.0" layoutY="62.0" text="登录名：" />
+      <Label layoutX="53.0" layoutY="90.0" text="密   码：" />
+      <TextField fx:id="txtFld_UName" layoutX="111.0" layoutY="58.0" />
+      <TextField fx:id="txtFld_UPassword" layoutX="111.0" layoutY="94.0" />
+   </children>
+</AnchorPane>
