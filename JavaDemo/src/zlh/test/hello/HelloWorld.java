@@ -70,6 +70,7 @@ public class HelloWorld {
 		System.out.println("pull失败--REVERTING_RESOLVED");		
 		System.out.println("push to upstream");
 		System.out.println("改了github上的项目名称");
+		System.out.println("xiugaigai");
 		
 		//logger.fatal("logger.fatal");--log4j才有
 		logger.error("logger.error");
