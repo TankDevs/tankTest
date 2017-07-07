@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;;;
 
 @Configuration
 @ComponentScan
-public class TestSpring {
+public class SpringProgram {
 	@Bean
 	MessageService mockMessageService() {
 		return new MessageService() {
@@ -25,7 +25,7 @@ public class TestSpring {
 		p.info();
 		// ctx.close();
 
-		ApplicationContext context = new AnnotationConfigApplicationContext(TestSpring.class);
+		ApplicationContext context = new AnnotationConfigApplicationContext(SpringProgram.class);
 		MessagePrinter printer = context.getBean(MessagePrinter.class);
 		printer.pringMessage();
 

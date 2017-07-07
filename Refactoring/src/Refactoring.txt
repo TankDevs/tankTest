@@ -1,0 +1,94 @@
+
+重新组织你的函数
+	Extract Method 将这段代码放进一个独立函数里，并让函数名称解释该函数的用途
+	Inline Method 在函数调用点插入函数本体，然后移除该函数
+	Inline Temp 将所有对该变量的引用动作，替换为对它赋值的那个表达式自身
+	Replace Temp with Query 将这个表达式提炼到一个独立函数中
+	Introduce Explaining Variable 将该复杂表达式（或其中一部分）的结果放进一个临时变量，以此变量名称来解释表达式用途
+	Split Temporary Variable 针对每次赋值，创造一个独立的、对应的临时变量
+	Remove Assignments to Parameters 以一个临时变量取代该参数的赋值结果
+	Replace Method with Method Object 将这个函数放进一个单独对象中，如此一来局部变量就成了对象内的值域，
+		然后你就可以在同一个对象中将这个大型函数分解为数个小型函数
+	Substitute Algorithm 将函数本体替换为另一个算法
+
+在对象之间搬移特性
+	Move Method 你的程序中，有个函数与其所驻class之外另一个class进行更多交流，调用后者，或被后者调用
+	Move Filed 在target class建立一个new field，修改source field的所有用户，令它们改用new field
+	Extract Class 建立一个新class，将相关的值域和函数从旧class搬移到新class
+	Inline Class 将class的所有特性搬移到另一个class中，然后移除原class
+	Hide Delegate 在server端（某个class）建立客户所需的所有函数，用以隐藏委托关系delegation
+	Remove Middle Man 让客户直接调用delegate
+	Introduce Forergn Method 在client class中建立一个函数，并以一个server class实体作为第一引数
+		你所使用的server class中需要一个额外函数，但你无法修改这个class
+	Introduce Local Extension 建立一个新class，使它包含这些额外函数。
+		让这个扩展品成为source class的subclass（子类）或wrapper（外覆类）
+
+重新组织数据
+	Self Encapsulate Field 为这个值域设立getter和setter，并且只以这些函数来访问值域
+	Replace Data Value with Object 将这笔数据项变成一个对象
+	Change Value to Reference 将实值对象改为引用对象
+ 	Change Reference to Value 将它变成一个value object
+	Replace Array with Object 以对象替换数组，对于数组中的每个元素，以一个值域表示之
+	Duplicate Observed Data 将该数据拷贝到一个domain object中，建立一个Observe模式，
+		用以对domain object和GUI object内的重复数据进行同步控制
+	Change Unidirectional Association to Bidirectional 添加一个反向指针，并使修改函数能够同时更新两条连接
+	Change Bidirectional Association to Unidirectional 去除不必要的关联
+	Replace Magic Number with Symbolic Constant 以符号常量/字面常量取代魔法数
+	Encapsulate Field 将它声明为private，并提供相应的访问函数
+	Encapsulate Collection 让这个函数返回该群集的一个只读映件，并在这个class中提供add/remove群集元素的函数
+	Replace Record with Data Class 为该record记录创建一个哑数据对象dumb data object
+	Replace Type Code with Class 以一个新的class替换该数值型别码
+	Replace Type Code with Subclasses 以子类取代型别码（immutable type code）
+	Replace Type Code with State/Strategy 以State/Strategy取代型别码
+	Replace Subclass with Fields 修改这些函数，使它们返回subclass中的某个（新增）值域，然后销毁subclass
+
+简化条件表达式
+	Decompose Conditional 从if、then、else三个段落中分别提炼出独立函数
+	Consolidate Conditional Expression 将这些测试合并为一个条件式，并将这个条件式提炼成为一个独立函数
+	Consolidate Duplicate Conditional Fragments 将这段重复代码搬移到条件式之外
+	Remove Control Flag 以break语句或return语句取代控制标记
+	Replace Nested Conditional with Guard Clauses 使用卫语句取代嵌套条件式
+	Replace Condional with Polymorphism 以多态取代条件式
+	Introduce Null Object 将null value无效值 替换为null object无效物
+	Introduce Assertion 以assersion明确表现这种假设
+
+简化函数调用
+	Rename Method 重新命名函数
+	Add Parameter 添加参数
+	Remove Parameter 移除参数
+	Separate Query from Modifier 建立两个不同的函数，其中一个负责查询，另一个负责修改
+	Parameterize Method 建立单一函数，以参数表达那些不同的值
+	Replace Parameter with Explicit Methods 针对该参数的每一个可能值，建立一个独立函数
+	Preserve Whole Object 改使用传递整个对象
+	Replace Parameter with Methods 让参数接收者去除该项参数，并直接调用前一个函数
+	Introduce Parameter Object 以一个对象取代这些参数
+	Remove Setting Method class中的某个值域，应该在对象创建时被设值，然后就不再改变
+	Hide Method 有一个函数，从来没有被其他任何class用到
+	Replace Constructor with Factory Method 以工厂函数取代构造函数
+	Encapsulate Dowmcast 将向下转型动作移到函数中
+	Replace Error Code with Exception 以异常取代错误码
+	Replace Exception with Test 以测试取代异常
+
+处理概括关系
+	Pull Up Field 值域上移
+	Pull Up Method 函数上移
+	Pull Up Constructor Body 构造函数本体上移
+	Push Down Method 函数下移
+	Push Down Field 值域下移
+	Extract Subclass 提炼子类
+	Extract Superclass 提炼超类
+	Extract Interface 提炼接口
+	Collapse Hierarchy 折叠继承体系
+	Form Template Method 塑造模板函数
+	Replace Inheritance with Delegation 以委托取代继承
+	Replace Delegation with Inheritance 以继承取代委托
+
+大型重构
+	Tease Apart Inheritance 梳理并分解继承体系；
+		建立两个继承体系，同时承担两项责任
+	Convert Procedural Design to Objects 将过程化设计转化为对象设计；
+		将数据记录变成对象，将行为分开，并将行为移入相关对象之中
+	Separate Domain from Presentation 将领域和显示分离
+		将domain logic分离出来，为它们建立独立的domain classes
+	Extract Hierarchy 提炼继承体系
+		建立继承体系，以一个subclass表示一种特殊情况	
