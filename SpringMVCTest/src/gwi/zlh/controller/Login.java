@@ -1,11 +1,15 @@
 package gwi.zlh.controller;
 
+import javax.swing.text.html.FormSubmitEvent.MethodType;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 //import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.ReflectionUtils.MethodFilter;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import gwi.zlh.mapper.UserMapper;
 import gwi.zlh.model.User;
@@ -35,8 +39,8 @@ public class Login {
 	@Autowired
 	UserMapper userDao;
 
-	@RequestMapping("/login")
-
+	//@RequestMapping("/login")
+	@RequestMapping( value="/login",method=RequestMethod.POST)
 	public String login(String username, String password) {
 		System.out.println("login");
 		User user = userDao.selectByPrimaryKey(username);

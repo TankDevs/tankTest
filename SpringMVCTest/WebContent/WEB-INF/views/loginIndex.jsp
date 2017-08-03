@@ -18,9 +18,57 @@
 </head>
 <body>
 	<div style="margin: 20px 0;"></div>
+	<div>测试JSP的9个内置对象，参考网站：http://blog.csdn.net/javaloveiphone/article/details/7937170</div>
+	<div>
+		<%="============变量，字符串==============="%><br>
+		<%="name"%><br>
+		<%
+			String name = "what your name?";
+		%>
+		<%=name%><br>
+
+		<%="============1、request==============="%><br>
+		<%=request%><br>
+		<%=request.getLocalAddr()%><br>
+		<%=request.getContextPath()%><br>
+
+		<%="============2、response==============="%><br>
+		<%=response.toString()%><br>
+
+		<%="============3、session==============="%><br>
+		<%=session.getId()%><br>
+		<%=session.getAttributeNames()%><br>
+
+		<%="============4、application==============="%><br>
+		<%=application.getContextPath()%><br>
+		<%=application.getServerInfo()%><br>
+		<%=application.getRealPath("")%><br>
+
+		<%="============5、out==============="%><br>
+		<%
+			out.print("shuchushenmene");
+		%><br>
+
+		<%="============6、page==============="%><br>
+		<%=page.toString()%><br>
+
+		<%="============7、config==============="%><br>
+		<%=config.getServletContext()%><br>
+		<%=config.getServletName()%><br>
+
+		<%="============8、exception==============="%><br>
+		<%=Exception.class.toString()%><br>
+
+		<%="============9、pageContext==============="%><br>
+		<%=pageContext.getRequest()%><br>
+
+	</div>
+
 	<div class="easyui-panel" title="New Topic"
 		style="width: 100%; max-width: 400px; padding: 30px 60px;">
-        <form id="ff" action="login.spring" method="post">
+		<form id="ff" action="login.spring" method="post">
+			<!-- method="get" -->
+			<!-- method="post" -->
 			<div style="margin-bottom: 20px">
 				<input class="easyui-textbox" name="username" style="width: 100%"
 					data-options="label:'Name:',required:true">
@@ -76,8 +124,8 @@
 					<option value="uk">Ukrainian</option>
 					<option value="vi">Vietnamese</option></select>
 			</div>
-			<input type="submit" value="登录"> 
-			<input type="button" style="margin-left: 100px" value="注册" onclick="regist()">
+			<input type="submit" value="登录"> <input type="button"
+				style="margin-left: 100px" value="注册" onclick="regist()">
 
 		</form>
 	</div>
