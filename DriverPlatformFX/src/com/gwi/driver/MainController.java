@@ -20,104 +20,102 @@ import javafx.stage.Stage;
 
 public class MainController extends BaseController implements Initializable {
 
-	private Button btnNewBtn = new Button();
+    private Button btnNewBtn = new Button();
 
-	@FXML
-	private Button btnIDCard;
+    @FXML
+    private Button btnIDCard;
 
-	@FXML
-	private AnchorPane acpMain;
+    @FXML
+    private AnchorPane acpMain;
 
-	private EventHandler<ActionEvent> btnClick = new EventHandler<ActionEvent>() {
+    private EventHandler<ActionEvent> btnClick = new EventHandler<ActionEvent>() {
 
-		@Override
-		public void handle(ActionEvent event) {
-			System.out.println("Main OK!" + "  " + ((Button) event.getSource()).getText());
-			try {
-				FXMLLoader fxmlLoader = new FXMLLoader();
-				fxmlLoader.setLocation(getClass().getResource("/com/gwi/driver/idcard/IDCard.fxml"));
-				Parent root = fxmlLoader.load();
-				Stage newStage = new Stage();
-				Scene newScene = new Scene(root);
-				newStage.setTitle("二代證");
-				newStage.setScene(newScene);
-				newStage.initModality(Modality.APPLICATION_MODAL);
-				newStage.show();
-				BaseController baseController = (BaseController) fxmlLoader.getController();
-				baseController.setStage(newStage);
-				// BaseController.mainStage.hide();
-			} catch (Exception e) {
-				// TODO: handle exception
-			}
-		}
-	};	
-	
-	private EventHandler<ActionEvent> btnPopup = new EventHandler<ActionEvent>() {
-		@Override
-		public void handle(ActionEvent event) {
-			try {
-				// BaseController.mainStage.close();
-				FXMLLoader fxmlLoader = new FXMLLoader();
-				fxmlLoader.setLocation(getClass().getResource("/com/gwi/driver/pop/PopContent.fxml"));
-				Parent acpPop = (AnchorPane) fxmlLoader.load();
-				acpPop.getStylesheets()
-						.add(getClass().getResource("/com/gwi/driver/pop/popStyle.css").toExternalForm());
-				acpPop.getStyleClass().add("pane");
-				// acpPop.setStyle("-fx-background-color: #336699;");
-				Popup popup = new Popup();
-				popup.setX(300);
-				popup.setY(300);
-				popup.getContent().add(acpPop);
-				// popup.getContent().addAll(new Circle( 25,25,50));
-				popup.setHideOnEscape(true);
-				// popup.is
-				popup.show(mainStage);
-				System.out.println("popup");
-			} catch (Exception e) {
-				// TODO: handle exception
-				System.out.println(e);
-			}
-		}
-	};
-	
-	private EventHandler<?super MouseEvent> btnClose =new EventHandler< MouseEvent>() {
-		@Override
-		public void handle(MouseEvent event) {
-			BaseController.mainStage.close();
-			System.out.println("匿名类实现");
-		};
-	};
-	
+        @Override
+        public void handle(ActionEvent event) {
+            System.out.println("Main OK!" + "  " + ((Button) event.getSource()).getText());
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("/com/gwi/driver/idcard/IDCard.fxml"));
+                Parent root = fxmlLoader.load();
+                Stage newStage = new Stage();
+                Scene newScene = new Scene(root);
+                newStage.setTitle("二代證");
+                newStage.setScene(newScene);
+                newStage.initModality(Modality.APPLICATION_MODAL);
+                newStage.show();
+                BaseController baseController = (BaseController) fxmlLoader.getController();
+                baseController.setStage(newStage);
+                // BaseController.mainStage.hide();
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        }
+    };
 
-	
-	// ActionEvent event
-	// public void IDCardOnMouseClicked() {
-	// System.out.println("OK");
-	// }
+    private EventHandler<ActionEvent> btnPopup = new EventHandler<ActionEvent>() {
+        @Override
+        public void handle(ActionEvent event) {
+            try {
+                // BaseController.mainStage.close();
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("/com/gwi/driver/pop/PopContent.fxml"));
+                Parent acpPop = (AnchorPane) fxmlLoader.load();
+                acpPop.getStylesheets()
+                        .add(getClass().getResource("/com/gwi/driver/pop/popStyle.css").toExternalForm());
+                acpPop.getStyleClass().add("pane");
+                // acpPop.setStyle("-fx-background-color: #336699;");
+                Popup popup = new Popup();
+                popup.setX(300);
+                popup.setY(300);
+                popup.getContent().add(acpPop);
+                // popup.getContent().addAll(new Circle( 25,25,50));
+                popup.setHideOnEscape(true);
+                // popup.is
+                popup.show(mainStage);
+                System.out.println("popup");
+            } catch (Exception e) {
+                // TODO: handle exception
+                System.out.println(e);
+            }
+        }
+    };
 
-	@Override
-	public void initialize(URL location, ResourceBundle resources) {
-		// 新增按钮
-		acpMain.getChildren().add(btnNewBtn);
-		btnNewBtn.setPrefHeight(50);
-		btnNewBtn.setPrefWidth(50);
-		// btnNewBtn.
-		// btnNewBtn.setTextAlignment(TextAlignment.CENTER);
-		btnNewBtn.setText("关闭");
-		btnNewBtn.setFont(Font.font(10));
-		AnchorPane.setRightAnchor(btnNewBtn, 0.0);
-		
-		btnNewBtn.setOnAction(btnPopup);		
-		
-		// lambda表达式实现
-//		btnNewBtn.setOnMouseClicked(e -> {
-//			BaseController.mainStage.close();
-//			System.out.println("lambda表达式实现");
-//		});
-		btnNewBtn.setOnMouseClicked(btnClose);
+    private EventHandler<? super MouseEvent> btnClose = new EventHandler<MouseEvent>() {
+        @Override
+        public void handle(MouseEvent event) {
+            BaseController.mainStage.close();
+            System.out.println("匿名类实现");
+        };
+    };
 
-		// 身份证按钮
-		btnIDCard.setOnAction(btnClick);
+    // ActionEvent event
+    // public void IDCardOnMouseClicked() {
+    // System.out.println("OK");
+    // }
 
-	}
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        // 新增按钮
+        acpMain.getChildren().add(btnNewBtn);
+        btnNewBtn.setPrefHeight(50);
+        btnNewBtn.setPrefWidth(50);
+        // btnNewBtn.
+        // btnNewBtn.setTextAlignment(TextAlignment.CENTER);
+        btnNewBtn.setText("关闭");
+        btnNewBtn.setFont(Font.font(10));
+        AnchorPane.setRightAnchor(btnNewBtn, 0.0);
+
+        btnNewBtn.setOnAction(btnPopup);
+
+        // lambda表达式实现
+        // btnNewBtn.setOnMouseClicked(e -> {
+        // BaseController.mainStage.close();
+        // System.out.println("lambda表达式实现");
+        // });
+        btnNewBtn.setOnMouseClicked(btnClose);
+
+        // 身份证按钮
+        btnIDCard.setOnAction(btnClick);
+
+    }
 }

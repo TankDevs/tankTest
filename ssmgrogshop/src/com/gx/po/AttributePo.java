@@ -1,53 +1,45 @@
 package com.gx.po;
 
 public class AttributePo {
-  
 
-	private Integer id;
-	
-	private Integer far_id;
-	
-	private String attributeName;
-	
-	private String attributeDetailsName;
-	
-	
+    private Integer id;
 
-	public Integer getId() {
-		return id;
-	}
+    private Integer far_id;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    private String attributeName;
 
-	public Integer getFar_id() {
-		return far_id;
-	}
-	
-	public void setFar_id(Integer far_id) {
-		this.far_id = far_id;
-	}
-	
-	public String getAttributeName() {
-		return attributeName;
-	}
+    private String attributeDetailsName;
 
-	public void setAttributeName(String attributeName) {
-		this.attributeName = attributeName;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public String getAttributeDetailsName() {
-		return attributeDetailsName;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public void setAttributeDetailsName(String attributeDetailsName) {
-		this.attributeDetailsName = attributeDetailsName;
-	}
-	
-	
-	
-	
-	
-	
+    public Integer getFar_id() {
+        return far_id;
+    }
+
+    public void setFar_id(Integer far_id) {
+        this.far_id = far_id;
+    }
+
+    public String getAttributeName() {
+        return attributeName;
+    }
+
+    public void setAttributeName(String attributeName) {
+        this.attributeName = attributeName;
+    }
+
+    public String getAttributeDetailsName() {
+        return attributeDetailsName;
+    }
+
+    public void setAttributeDetailsName(String attributeDetailsName) {
+        this.attributeDetailsName = attributeDetailsName;
+    }
+
 }

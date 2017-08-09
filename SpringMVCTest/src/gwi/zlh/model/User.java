@@ -14,50 +14,50 @@ public class User {
     private Integer departmentid;
 
     public String getUserid() {
-	return userid;
+        return userid;
     }
 
     public void setUserid(String userid) {
-	this.userid = userid;
+        this.userid = userid;
     }
 
     public String getName() {
-	return name;
+        return name;
     }
 
     public void setName(String name) {
-	this.name = name;
+        this.name = name;
     }
 
     public Integer getAge() {
-	return age;
+        return age;
     }
 
     public void setAge(Integer age) {
-	this.age = age;
+        this.age = age;
     }
 
     public String getPassword() {
-	return password;
+        return password;
     }
 
     public void setPassword(String password) {
-	this.password = password;
+        this.password = password;
     }
 
     public Integer getRoleid() {
-	return roleid;
+        return roleid;
     }
 
     public void setRoleid(Integer roleid) {
-	this.roleid = roleid;
+        this.roleid = roleid;
     }
 
     public Integer getDepartmentid() {
-	return departmentid;
+        return departmentid;
     }
 
     public void setDepartmentid(Integer departmentid) {
-	this.departmentid = departmentid;
+        this.departmentid = departmentid;
     }
 }

@@ -14,13 +14,13 @@ public class HelloWorld {
      */
     @RequestMapping("/helloworld")
     public String helloworld() {
-	System.out.println("hello world");
-	return "helloWorldSuccess";
+        System.out.println("hello world");
+        return "helloWorldSuccess";
     }
 
     @RequestMapping("/hello")
     public String hello() {
-	System.out.println("hello");
-	return "helloSuccess";
+        System.out.println("hello");
+        return "helloSuccess";
     }
 }

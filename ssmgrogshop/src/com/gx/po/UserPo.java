@@ -1,38 +1,35 @@
 package com.gx.po;
 
 public class UserPo {
-	
-	private Integer id;
-	
-	private String userName;
-	
-	private String password;
-	
-	
 
-	public Integer getId() {
-		return id;
-	}
+    private Integer id;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    private String userName;
 
-	public String getUserName() {
-		return userName;
-	}
+    private String password;
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public String getUserName() {
+        return userName;
+    }
 
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
 }

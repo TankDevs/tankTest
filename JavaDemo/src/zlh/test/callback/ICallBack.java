@@ -1,5 +1,6 @@
 package zlh.test.callback;
 //参考网页  http://blog.csdn.net/xiaanming/article/details/8703708/
+
 /*
  以前不理解什么叫回调，天天听人家说加一个回调方法啥的，心里想我草，什么叫回调方法啊？
  然后自己就在网上找啊找啊找，找了很多也不是很明白，现在知道了，所谓回调：
@@ -15,11 +16,11 @@ A的对象a调用B的方法 f(CallBack callback) ——A类调用B类的某个方法 C
  */
 
 public interface ICallBack {
-	/**
-	 * 这个是小李知道答案时要调用的函数告诉小王，也就是回调函数
-	 * 
-	 * @param result
-	 *            是答案
-	 */
-	public void callBackFunc(String result);
+    /**
+     * 这个是小李知道答案时要调用的函数告诉小王，也就是回调函数
+     * 
+     * @param result
+     *            是答案
+     */
+    public void callBackFunc(String result);
 }

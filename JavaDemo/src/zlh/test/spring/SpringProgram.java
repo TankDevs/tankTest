@@ -10,24 +10,24 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;;;
 @Configuration
 @ComponentScan
 public class SpringProgram {
-	@Bean
-	MessageService mockMessageService() {
-		return new MessageService() {
-			public String getMessage() {
-				return "Hello Spring";
-			}
-		};
-	}
+    @Bean
+    MessageService mockMessageService() {
+        return new MessageService() {
+            public String getMessage() {
+                return "Hello Spring";
+            }
+        };
+    }
 
-	public static void main(String[] args) {
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("bean.xml");// 读取bean.xml中的内容
-		Person p = ctx.getBean("person", Person.class);// 创建bean的引用对象
-		p.info();
-		// ctx.close();
+    public static void main(String[] args) {
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("bean.xml");// 读取bean.xml中的内容
+        Person p = ctx.getBean("person", Person.class);// 创建bean的引用对象
+        p.info();
+        // ctx.close();
 
-		ApplicationContext context = new AnnotationConfigApplicationContext(SpringProgram.class);
-		MessagePrinter printer = context.getBean(MessagePrinter.class);
-		printer.pringMessage();
+        ApplicationContext context = new AnnotationConfigApplicationContext(SpringProgram.class);
+        MessagePrinter printer = context.getBean(MessagePrinter.class);
+        printer.pringMessage();
 
-	}
+    }
 }

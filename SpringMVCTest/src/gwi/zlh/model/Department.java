@@ -8,26 +8,26 @@ public class Department {
     private String address;
 
     public Integer getDepartmentid() {
-	return departmentid;
+        return departmentid;
     }
 
     public void setDepartmentid(Integer departmentid) {
-	this.departmentid = departmentid;
+        this.departmentid = departmentid;
     }
 
     public String getName() {
-	return name;
+        return name;
     }
 
     public void setName(String name) {
-	this.name = name;
+        this.name = name;
     }
 
     public String getAddress() {
-	return address;
+        return address;
     }
 
     public void setAddress(String address) {
-	this.address = address;
+        this.address = address;
     }
 }

@@ -2,8 +2,8 @@ package zlh.test.annotation;
 
 public class AnnotationProgram {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-	}
+    }
 
 }

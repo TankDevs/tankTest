@@ -1,32 +1,31 @@
 package zlh.test.annotation.standard;
 
 class AppleService {
-	
-    public void displayName(){
+
+    public void displayName() {
         System.out.println("水果的名字是：苹果");
     }
-    
+
     /**
      * @deprecated 该方法已经过期，不推荐使用!!!
      */
     @Deprecated
-    public void showTaste(){
+    public void showTaste() {
         System.out.println("水果的苹果的口感是：脆甜");
     }
-    
+
     /**
      * @author ZLH
-     * @param typeId 类型
+     * @param typeId
+     *            类型
      * @return void
      */
-    public void showTaste(int typeId){
-        if(typeId==1){
+    public void showTaste(int typeId) {
+        if (typeId == 1) {
             System.out.println("水果的苹果的口感是：酸涩");
-        }
-        else if(typeId==2){
+        } else if (typeId == 2) {
             System.out.println("水果的苹果的口感是：绵甜");
-        }
-        else{
+        } else {
             System.out.println("水果的苹果的口感是：脆甜");
         }
     }
@@ -38,10 +37,10 @@ public class FruitRun {
      * @param args
      */
     public static void main(String[] args) {
-        Apple apple=new Apple();
-        apple.displayName();    
-        
-        AppleService appleService=new AppleService();
+        Apple apple = new Apple();
+        apple.displayName();
+
+        AppleService appleService = new AppleService();
         appleService.showTaste();
         appleService.showTaste(0);
         appleService.showTaste(2);

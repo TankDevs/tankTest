@@ -1,137 +1,129 @@
 package com.gx.po;
 
 public class RoomSetPo {
-	
-	private Integer id;
-	
-	private Integer guestRoomLevelID;
-	
-	private Integer roomStateID;
-	
-	private String roomNumber;
-	
-	private String roomAmount;
-	
-	private double standardPriceDay;
-	
-	private double standardPrice;
-	
-	private String maxDuration;
-	
-	private String firstDuration;
-	
-	private double firstPrice;
-	
-	
-	//拓展字段
-	
-	private String guestRoomLevelName;
-	
-	private String roomName;
-	
-	
-	
 
+    private Integer id;
 
-	public Integer getId() {
-		return id;
-	}
+    private Integer guestRoomLevelID;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    private Integer roomStateID;
 
-	public Integer getGuestRoomLevelID() {
-		return guestRoomLevelID;
-	}
+    private String roomNumber;
 
-	public void setGuestRoomLevelID(Integer guestRoomLevelID) {
-		this.guestRoomLevelID = guestRoomLevelID;
-	}
+    private String roomAmount;
 
-	public Integer getRoomStateID() {
-		return roomStateID;
-	}
+    private double standardPriceDay;
 
-	public void setRoomStateID(Integer roomStateID) {
-		this.roomStateID = roomStateID;
-	}
+    private double standardPrice;
 
-	public String getRoomNumber() {
-		return roomNumber;
-	}
+    private String maxDuration;
 
-	public void setRoomNumber(String roomNumber) {
-		this.roomNumber = roomNumber;
-	}
+    private String firstDuration;
 
-	public String getRoomAmount() {
-		return roomAmount;
-	}
+    private double firstPrice;
 
-	public void setRoomAmount(String roomAmount) {
-		this.roomAmount = roomAmount;
-	}
+    // 拓展字段
 
-	public double getStandardPriceDay() {
-		return standardPriceDay;
-	}
+    private String guestRoomLevelName;
 
-	public void setStandardPriceDay(double standardPriceDay) {
-		this.standardPriceDay = standardPriceDay;
-	}
+    private String roomName;
 
-	public double getStandardPrice() {
-		return standardPrice;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public void setStandardPrice(double standardPrice) {
-		this.standardPrice = standardPrice;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public String getMaxDuration() {
-		return maxDuration;
-	}
+    public Integer getGuestRoomLevelID() {
+        return guestRoomLevelID;
+    }
 
-	public void setMaxDuration(String maxDuration) {
-		this.maxDuration = maxDuration;
-	}
+    public void setGuestRoomLevelID(Integer guestRoomLevelID) {
+        this.guestRoomLevelID = guestRoomLevelID;
+    }
 
-	public String getFirstDuration() {
-		return firstDuration;
-	}
+    public Integer getRoomStateID() {
+        return roomStateID;
+    }
 
-	public void setFirstDuration(String firstDuration) {
-		this.firstDuration = firstDuration;
-	}
+    public void setRoomStateID(Integer roomStateID) {
+        this.roomStateID = roomStateID;
+    }
 
-	public double getFirstPrice() {
-		return firstPrice;
-	}
+    public String getRoomNumber() {
+        return roomNumber;
+    }
 
-	public void setFirstPrice(double firstPrice) {
-		this.firstPrice = firstPrice;
-	}
-	
-	
-	
-	//拓展字段属性
-	
-	public String getGuestRoomLevelName() {
-		return guestRoomLevelName;
-	}
-	
-	public void setGuestRoomLevelName(String guestRoomLevelName) {
-		this.guestRoomLevelName = guestRoomLevelName;
-	}
-	
-	public String getRoomName() {
-		return roomName;
-	}
-	
-	public void setRoomName(String roomName) {
-		this.roomName = roomName;
-	}
-	
+    public void setRoomNumber(String roomNumber) {
+        this.roomNumber = roomNumber;
+    }
+
+    public String getRoomAmount() {
+        return roomAmount;
+    }
+
+    public void setRoomAmount(String roomAmount) {
+        this.roomAmount = roomAmount;
+    }
+
+    public double getStandardPriceDay() {
+        return standardPriceDay;
+    }
+
+    public void setStandardPriceDay(double standardPriceDay) {
+        this.standardPriceDay = standardPriceDay;
+    }
+
+    public double getStandardPrice() {
+        return standardPrice;
+    }
+
+    public void setStandardPrice(double standardPrice) {
+        this.standardPrice = standardPrice;
+    }
+
+    public String getMaxDuration() {
+        return maxDuration;
+    }
+
+    public void setMaxDuration(String maxDuration) {
+        this.maxDuration = maxDuration;
+    }
+
+    public String getFirstDuration() {
+        return firstDuration;
+    }
+
+    public void setFirstDuration(String firstDuration) {
+        this.firstDuration = firstDuration;
+    }
+
+    public double getFirstPrice() {
+        return firstPrice;
+    }
+
+    public void setFirstPrice(double firstPrice) {
+        this.firstPrice = firstPrice;
+    }
+
+    // 拓展字段属性
+
+    public String getGuestRoomLevelName() {
+        return guestRoomLevelName;
+    }
+
+    public void setGuestRoomLevelName(String guestRoomLevelName) {
+        this.guestRoomLevelName = guestRoomLevelName;
+    }
+
+    public String getRoomName() {
+        return roomName;
+    }
+
+    public void setRoomName(String roomName) {
+        this.roomName = roomName;
+    }
 
 }

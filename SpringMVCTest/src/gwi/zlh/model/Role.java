@@ -6,18 +6,18 @@ public class Role {
     private String roledescription;
 
     public Integer getRoleid() {
-	return roleid;
+        return roleid;
     }
 
     public void setRoleid(Integer roleid) {
-	this.roleid = roleid;
+        this.roleid = roleid;
     }
 
     public String getRoledescription() {
-	return roledescription;
+        return roledescription;
     }
 
     public void setRoledescription(String roledescription) {
-	this.roledescription = roledescription;
+        this.roledescription = roledescription;
     }
 }

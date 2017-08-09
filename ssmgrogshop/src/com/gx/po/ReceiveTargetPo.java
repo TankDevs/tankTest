@@ -3,91 +3,86 @@ package com.gx.po;
 import java.sql.Timestamp;
 
 public class ReceiveTargetPo {
-	
-	private Integer id;
-	
-	private Integer targetTypeID;
-	
-	private String principal;
-	
-	private String teamName;
 
-	private String teamCode;
-	
-	private Timestamp registerTime;
-	
-	private String contactPhoneNUmber;
-	
+    private Integer id;
 
-	//扩展字段
-	private String targetTypeName;
-	
-	
-	
+    private Integer targetTypeID;
 
-	public Integer getId() {
-		return id;
-	}
+    private String principal;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    private String teamName;
 
-	public Integer getTargetTypeID() {
-		return targetTypeID;
-	}
+    private String teamCode;
 
-	public void setTargetTypeID(Integer targetTypeID) {
-		this.targetTypeID = targetTypeID;
-	}
+    private Timestamp registerTime;
 
-	public String getPrincipal() {
-		return principal;
-	}
+    private String contactPhoneNUmber;
 
-	public void setPrincipal(String principal) {
-		this.principal = principal;
-	}
-	
-	public String getTeamName() {
-		return teamName;
-	}
-	
-	public void setTeamName(String teamName) {
-		this.teamName = teamName;
-	}
+    // 扩展字段
+    private String targetTypeName;
 
-	public String getTeamCode() {
-		return teamCode;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public void setTeamCode(String teamCode) {
-		this.teamCode = teamCode;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public Timestamp getRegisterTime() {
-		return registerTime;
-	}
+    public Integer getTargetTypeID() {
+        return targetTypeID;
+    }
 
-	public void setRegisterTime(Timestamp registerTime) {
-		this.registerTime = registerTime;
-	}
+    public void setTargetTypeID(Integer targetTypeID) {
+        this.targetTypeID = targetTypeID;
+    }
 
-	public String getTargetTypeName() {
-		return targetTypeName;
-	}
+    public String getPrincipal() {
+        return principal;
+    }
 
-	public void setTargetTypeName(String targetTypeName) {
-		this.targetTypeName = targetTypeName;
-	}
-	
-	public String getContactPhoneNUmber() {
-		return contactPhoneNUmber;
-	}
-	
-	public void setContactPhoneNUmber(String contactPhoneNUmber) {
-		this.contactPhoneNUmber = contactPhoneNUmber;
-	}
-	
+    public void setPrincipal(String principal) {
+        this.principal = principal;
+    }
+
+    public String getTeamName() {
+        return teamName;
+    }
+
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
+    }
+
+    public String getTeamCode() {
+        return teamCode;
+    }
+
+    public void setTeamCode(String teamCode) {
+        this.teamCode = teamCode;
+    }
+
+    public Timestamp getRegisterTime() {
+        return registerTime;
+    }
+
+    public void setRegisterTime(Timestamp registerTime) {
+        this.registerTime = registerTime;
+    }
+
+    public String getTargetTypeName() {
+        return targetTypeName;
+    }
+
+    public void setTargetTypeName(String targetTypeName) {
+        this.targetTypeName = targetTypeName;
+    }
+
+    public String getContactPhoneNUmber() {
+        return contactPhoneNUmber;
+    }
+
+    public void setContactPhoneNUmber(String contactPhoneNUmber) {
+        this.contactPhoneNUmber = contactPhoneNUmber;
+    }
 
 }

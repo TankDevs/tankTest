@@ -13,23 +13,23 @@ import junit.framework.Assert;
  * 
  */
 public class CustomerRF {
-	
-	private Set<OrderRF> _orders = new HashSet<OrderRF>();
 
-	Set<OrderRF> friendOrders() {
-		return _orders;
-	}
+    private Set<OrderRF> _orders = new HashSet<OrderRF>();
 
-//	void addOrder(OrderRF order) {
-//		order.setCustomer(this);
-//	}
+    Set<OrderRF> friendOrders() {
+        return _orders;
+    }
 
-	double getDiscount() {
-		return 1;
-	}
+    // void addOrder(OrderRF order) {
+    // order.setCustomer(this);
+    // }
 
-	double getPriceFor(OrderRF order) {
-		Assert.assertTrue(_orders.contains(order));
-		return order.getDisCountedPrice(this);
-	}
+    double getDiscount() {
+        return 1;
+    }
+
+    double getPriceFor(OrderRF order) {
+        Assert.assertTrue(_orders.contains(order));
+        return order.getDisCountedPrice(this);
+    }
 }

@@ -1,67 +1,65 @@
 package com.gx.vo;
 
 public class TeamPayVo {
-	
-	private double stayMoney;
-	
-	private double changRoomMoney;
-	
-	private double otherMoney;
-	
-	private double payMoney;
-	
-	private double depositMoney;
-	
-	private double payRepairMoney;
-	
-	
 
-	public double getStayMoney() {
-		return stayMoney;
-	}
+    private double stayMoney;
 
-	public void setStayMoney(double stayMoney) {
-		this.stayMoney = stayMoney;
-	}
+    private double changRoomMoney;
 
-	public double getChangRoomMoney() {
-		return changRoomMoney;
-	}
+    private double otherMoney;
 
-	public void setChangRoomMoney(double changRoomMoney) {
-		this.changRoomMoney = changRoomMoney;
-	}
+    private double payMoney;
 
-	public double getOtherMoney() {
-		return otherMoney;
-	}
+    private double depositMoney;
 
-	public void setOtherMoney(double otherMoney) {
-		this.otherMoney = otherMoney;
-	}
+    private double payRepairMoney;
 
-	public double getPayMoney() {
-		return payMoney;
-	}
+    public double getStayMoney() {
+        return stayMoney;
+    }
 
-	public void setPayMoney(double payMoney) {
-		this.payMoney = payMoney;
-	}
+    public void setStayMoney(double stayMoney) {
+        this.stayMoney = stayMoney;
+    }
 
-	public double getDepositMoney() {
-		return depositMoney;
-	}
+    public double getChangRoomMoney() {
+        return changRoomMoney;
+    }
 
-	public void setDepositMoney(double depositMoney) {
-		this.depositMoney = depositMoney;
-	}
+    public void setChangRoomMoney(double changRoomMoney) {
+        this.changRoomMoney = changRoomMoney;
+    }
 
-	public double getPayRepairMoney() {
-		return payRepairMoney;
-	}
+    public double getOtherMoney() {
+        return otherMoney;
+    }
 
-	public void setPayRepairMoney(double payRepairMoney) {
-		this.payRepairMoney = payRepairMoney;
-	}
-	
+    public void setOtherMoney(double otherMoney) {
+        this.otherMoney = otherMoney;
+    }
+
+    public double getPayMoney() {
+        return payMoney;
+    }
+
+    public void setPayMoney(double payMoney) {
+        this.payMoney = payMoney;
+    }
+
+    public double getDepositMoney() {
+        return depositMoney;
+    }
+
+    public void setDepositMoney(double depositMoney) {
+        this.depositMoney = depositMoney;
+    }
+
+    public double getPayRepairMoney() {
+        return payRepairMoney;
+    }
+
+    public void setPayRepairMoney(double payRepairMoney) {
+        this.payRepairMoney = payRepairMoney;
+    }
+
 }

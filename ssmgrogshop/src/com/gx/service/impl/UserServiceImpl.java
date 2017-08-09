@@ -9,16 +9,16 @@ import com.gx.po.UserPo;
 import com.gx.service.UserService;
 
 @Transactional
-@Service(value="userService")
+@Service(value = "userService")
 public class UserServiceImpl implements UserService {
 
-	@Autowired
-	private UserDao userDao;
-	
-	@Override
-	public UserPo selectLogin(UserPo user) {
-		// TODO Auto-generated method stub
-		return userDao.selectLogin(user);
-	}
+    @Autowired
+    private UserDao userDao;
+
+    @Override
+    public UserPo selectLogin(UserPo user) {
+        // TODO Auto-generated method stub
+        return userDao.selectLogin(user);
+    }
 
 }

@@ -11,20 +11,22 @@ import javafx.scene.layout.AnchorPane;
 
 public class PopController implements Initializable {
 
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+        // TODO Auto-generated method stub
 
-	}
-@FXML
-private AnchorPane anchorPane;
-	public void btnClicked() {
-		Alert alert =new Alert(AlertType.ERROR);
-		alert.show();
-		
-		System.out.println("PopController.btnClicked()");
-		//anchorPane.getStyleClass();
-		anchorPane.getStyleClass().add("pane2");
-	}
-	
+    }
+
+    @FXML
+    private AnchorPane anchorPane;
+
+    public void btnClicked() {
+        Alert alert = new Alert(AlertType.ERROR);
+        alert.show();
+
+        System.out.println("PopController.btnClicked()");
+        // anchorPane.getStyleClass();
+        anchorPane.getStyleClass().add("pane2");
+    }
+
 }
