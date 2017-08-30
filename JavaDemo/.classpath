@@ -17,5 +17,9 @@
 	<classpathentry kind="lib" path="lib/spring-aop-4.3.9.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/validation-api-1.1.0.Final.jar"/>
 	<classpathentry kind="lib" path="lib/bval-jsr303-0.5.jar"/>
+	<classpathentry kind="lib" path="lib/bval-core-0.5-sources.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang3-3.4-sources.jar"/>
+	<classpathentry kind="lib" path="lib/commons-io-2.5.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
