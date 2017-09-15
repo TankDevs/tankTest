@@ -26,7 +26,7 @@ public class ExamCaseOneUTest {
     }
 
     @Test
-    public void test_stringParseASCII() {
+    public void test_stringAdd5ByASCII() {
         ExamCaseOne examCaseOne = new ExamCaseOne();
 
         assertEquals("78fg9zZA4z3AAaaAiA",
@@ -34,7 +34,12 @@ public class ExamCaseOneUTest {
 
         assertEquals("LQ38i09xfkAp2M9iFaIxkZ",
                 examCaseOne.stringAdd5ByASCII("GL83d54safWk7H4dAwDsfU"));
-
+        
+        assertEquals("非法字符串",
+                examCaseOne.stringAdd5ByASCII("d+d8*"));
+        
+        assertEquals("非法字符串",
+                examCaseOne.stringAdd5ByASCII("7}dr*"));
     }
 
     @Test
@@ -48,7 +53,7 @@ public class ExamCaseOneUTest {
 
         assertEquals(true, ExamCaseOne.isPalindrome(""));
     }
-    
+
     @Test
     public void test_revertNumberByBinary() {
         assertEquals(1, ExamCaseOne.revertNumberByBinary(0));
@@ -58,4 +63,18 @@ public class ExamCaseOneUTest {
         assertEquals(2515, ExamCaseOne.revertNumberByBinary(5676));
     }
 
+    @Test
+    public void test_stringAddByASCII() {
+        ExamCaseOne examCaseOne = new ExamCaseOne();
+        assertEquals("LQ3A8E05xzfakBp2M9iF4eIxkZ",
+                examCaseOne.stringAddByASCII("GL8V3Z50suavfWk7H4dA9zDsfU", 5));
+        assertEquals("GL8V3Z50suavfWk7H4dA9zDsfU",
+                examCaseOne.stringAddByASCII("LQ3A8E05xzfakBp2M9iF4eIxkZ", -5));
+        assertEquals("78fg9zZC4z3BAdeEiD",
+                examCaseOne.stringAddByASCII("67ab8uUX3u2WVyzZdY", 31));
+        assertEquals("67ab8uUX3u2WVyzZdY",
+                examCaseOne.stringAddByASCII("78fg9zZC4z3BAdeEiD", -31));
+        assertEquals("输入不合法", examCaseOne.stringAddByASCII("a+", 5));
+        assertEquals("输入不合法", examCaseOne.stringAddByASCII("}", 5));
+    }
 }
