@@ -11,7 +11,10 @@ public class Business implements IBusiness, IBusiness2 {
 
     @Override
     public void doSomeThing2() {
-        System.out.println("执行业务逻辑2");
+        String className=this.getClass().getName();
+        String funcName = Thread.currentThread().getStackTrace()[1]
+                .getMethodName();
+        System.out.println("执行业务逻辑2:" + className+"-"+funcName);
     }
 
 }

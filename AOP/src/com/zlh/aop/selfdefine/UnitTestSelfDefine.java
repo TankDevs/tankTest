@@ -25,7 +25,7 @@ public class UnitTestSelfDefine {
         //启动MyTranslator的main函数 
         String[] args={""};
       //单元测试失败!!!!!!!
-        cl.run("com.zlh.aop.selfdefine$MyTranslator", args); 
+        cl.run("UnitTestSelfDefine", args); 
 
     }
 
